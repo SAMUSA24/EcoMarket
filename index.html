@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EcoMarket — Productos 100% ecológicos para un estilo de vida sostenible. Higiene, Hogar, Alimentación y Moda consciente." />
+  <title>EcoMarket · Vive Verde, Vive Bien</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="img/Logo definitivo.png">
+</head>
+<body>
+  <header class="cabecera-sitio" role="banner">
+    <div class="cabecera-interior">
+      <a href="index.html" class="logo-sitio" aria-label="EcoMarket inicio">
+        <span class="icono-logo">🌿</span>
+        Eco<span>Market</span>
+      </a>
+
+      <nav id="main-nav" role="navigation" aria-label="Navegación principal">
+        <a href="index.html" class="enlace-nav active">Inicio</a>
+        <a href="shop.html"  class="enlace-nav">Tienda</a>
+        <a href="about.html" class="enlace-nav">Nosotros</a>
+      </nav>
+
+      <button class="boton-carrito boton" aria-label="Abrir carrito de compras">
+        🛒 <span>Carrito</span>
+        <span class="contador-carrito" aria-live="polite">0</span>
+      </button>
+    </div>
+  </header>
+  <div id="cart-container"></div>
+  <main>
+    <section class="hero" aria-label="Bienvenida">
+      <div class="contenido-hero">
+        <div class="subtitulo-hero">
+          Empresa dedica a productos 100% Organicos
+        </div>
+
+        <h1 class="titulo-hero">
+          Consume con <span style="color: #c0603a;">conciencia</span>,<br>
+          vive con propósito
+        </h1>
+
+        <p class="descripcion-hero">
+          En EcoMarket encontrarás todo lo que necesitas para un estilo de vida sostenible.
+          Productos seleccionados con el planeta y las personas en el centro.
+        </p>
+
+        <div class="acciones-hero">
+          <a href="shop.html" class="boton boton-principal">
+            🛍️ Explorar Tienda
+          </a>
+          <a href="about.html" class="boton boton-contorno">
+            Nuestra Historia →
+          </a>
+        </div>
+
+        <div class="estadisticas-hero">
+          <div class="elemento-estadistica">
+            <span class="numero-estadistica" id="product-count">25</span>
+            <span class="etiqueta-estadistica">Productos eco</span>
+          </div>
+          <div class="elemento-estadistica">
+            <span class="numero-estadistica">100%</span>
+            <span class="etiqueta-estadistica">Ingredientes naturales</span>
+          </div>
+          <div class="elemento-estadistica">
+            <span class="numero-estadistica">0</span>
+            <span class="etiqueta-estadistica">Plásticos innecesarios</span>
+          </div>
+        </div>
+      </div>
+      <div class="decoracion-hero" aria-hidden="true"><img src="img/hojas.png"></div>
+    </section>
+    <div class="banda-confianza" aria-hidden="true">
+      <div class="desplazamiento-confianza">
+        <span class="elemento-confianza">🌍 Huella de carbono neutra</span>
+        <span class="elemento-confianza">♻️ Packaging 100% reciclado</span>
+        <span class="elemento-confianza">🌿 Ingredientes certificados</span>
+        <span class="elemento-confianza">💚 Comercio justo</span>
+        <span class="elemento-confianza">🐾 Cruelty-Free</span>
+        <span class="elemento-confianza">🏭 Producción local</span>
+        <span class="elemento-confianza">🌍 Huella de carbono neutra</span>
+        <span class="elemento-confianza">♻️ Packaging 100% reciclado</span>
+        <span class="elemento-confianza">🌿 Ingredientes certificados</span>
+        <span class="elemento-confianza">💚 Comercio justo</span>
+        <span class="elemento-confianza">🐾 Cruelty-Free</span>
+        <span class="elemento-confianza">🏭 Producción local</span>
+        <span class="elemento-confianza">🌍 Huella de carbono neutra</span>
+        <span class="elemento-confianza">♻️ Packaging 100% reciclado</span>
+        <span class="elemento-confianza">🌿 Ingredientes certificados</span>
+        <span class="elemento-confianza">💚 Comercio justo</span>
+        <span class="elemento-confianza">🐾 Cruelty-Free</span>
+        <span class="elemento-confianza">🏭 Producción local</span>
+        <span class="elemento-confianza">🌍 Huella de carbono neutra</span>
+        <span class="elemento-confianza">♻️ Packaging 100% reciclado</span>
+        <span class="elemento-confianza">🌿 Ingredientes certificados</span>
+        <span class="elemento-confianza">💚 Comercio justo</span>
+        <span class="elemento-confianza">🐾 Cruelty-Free</span>
+        <span class="elemento-confianza">🏭 Producción local</span>
+      </div>
+    </div>
+    <section class="section seccion--alternativa" aria-labelledby="values-heading">
+      <div class="contenedor">
+        <div class="texto-centrado" style="margin-bottom: var(--space-2xl)">
+          <span class="secciont">¿Por qué EcoMarket?</span>
+          <h2 id="values-heading" data-animate>Cada compra es una apuesta<br>por el planeta</h2>
+          <p data-animate data-delay="1">Seleccionamos cada producto con nuestros criterios de sostenibilidad, ética y eficacia. Sin rodeos.</p>
+        </div>
+
+        <div class="rejilla-valores">
+          <div class="tarjeta-valor" data-animate data-delay="1">
+            <span class="icono-valor">🔬</span>
+            <h3>Ingredientes 100% Verificados</h3>
+            <p>Analizamos la composición de cada producto. Si no pasa nuestro control de calidad, no entra en nuestro catálogo.</p>
+          </div>
+          <div class="tarjeta-valor" data-animate data-delay="2">
+            <span class="icono-valor">📦</span>
+            <h3>Envases Zero Waste</h3>
+            <p>Carton reciclado, papel, bambú o sin envase. Decimos adiós al plástico de un solo uso en toda nuestra cadena.</p>
+          </div>
+          <div class="tarjeta-valor" data-animate data-delay="3">
+            <span class="icono-valor">🤝</span>
+            <h3>Apoyo a los productos locales</h3>
+            <p>Trabajamos con productores locales y comunidades rurales garantizando precios justos y condiciones dignas.</p>
+          </div>
+          <div class="tarjeta-valor" data-animate data-delay="4">
+            <span class="icono-valor">🚚</span>
+            <h3>Envío Neutro en CO₂</h3>
+            <p>Compensamos cada kilómetro de reparto plantando árboles a través de nuestro programa "Raíces Verdes".<br> Ademas planteamos renovar todos nuestros vehiculos a vehiculos electricos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="contenedor">
+        <div class="cabecera-seccion">
+          <div>
+            <span class="secciont">Lo más vendido</span>
+            <h2 id="featured-heading" data-animate>Compras frecuentes <br>de la semana</h2>
+          </div>
+          <a href="shop.html" class="boton boton-contorno" data-animate data-delay="1">Ver toda la tienda →</a>
+        </div>
+      </div>
+    </section>
+    <section class="section seccion--alternativa seccion--textura" aria-labelledby="cats-heading">
+      <div class="contenedor">
+        <div class="texto-centrado" style="margin-bottom: var(--space-2xl)">
+          <span class="secciont">Colecciones</span>
+          <h2 id="cats-heading" data-animate>Encuentra tu categoría</h2>
+        </div>
+
+        <div class="rejilla-valores">
+          <a href="shop.html#higiene" class="tarjeta-valor" data-animate data-delay="1" style="text-decoration:none;cursor:pointer;">
+            <span class="icono-valor">🧴</span>
+            <h3>Higiene</h3>
+            <p>Champús, jabones y cuidado personal sin productos tóxicos ni plásticos.</p>
+          </a>
+          <a href="shop.html#hogar" class="tarjeta-valor" data-animate data-delay="2" style="text-decoration:none;cursor:pointer;">
+            <span class="icono-valor">🏡</span>
+            <h3>Hogar</h3>
+            <p>Limpieza y decoración sostenible para cada estancia de tu casa.</p>
+          </a>
+          <a href="shop.html#alimentacion" class="tarjeta-valor" data-animate data-delay="3" style="text-decoration:none;cursor:pointer;">
+            <span class="icono-valor">🥗</span>
+            <h3>Alimentación</h3>
+            <p>Alimentos orgánicos certificados directos de nuestros productores.</p>
+          </a>
+          <a href="shop.html#moda" class="tarjeta-valor" data-animate data-delay="4" style="text-decoration:none;cursor:pointer;">
+            <span class="icono-valor">👗</span>
+            <h3>Moda</h3>
+            <p>Ropa y accesorios de fibras naturales y recicladas.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="banner-llamada" role="complementary">
+      <div class="contenedor texto-centrado">
+        <span class="secciont" style="background:var(--clr-terra)">Únete al movimiento</span>
+        <h2 data-animate>Cada pequeño cambio<br>suma un gran impacto</h2>
+        <p data-animate data-delay="1">
+          Más de 150 hogares ya han dado el paso hacia un consumo más consciente.
+          ¿Te unes a la revolución EcoMarket?
+        </p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;" data-animate data-delay="2">
+          <a href="shop.html" class="boton boton-terracota">🛍️ Empezar ahora</a>
+          <a href="about.html" class="boton boton-contorno" style="border-color:rgba(255,255,255,0.5);color:white;">Conocer la misión</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="pie-sitio" role="contentinfo">
+    <div class="contenedor">
+      <div class="rejilla-pie">
+
+        <div class="marca-pie">
+          <a href="index.html" class="logo-sitio">
+            <img src="img/Logo definitivo.png" class="icono-logo" width="75%" style="margin-top: -15%;"></img>
+          </a>
+          <p class="eslogan-pie">Productos ecológicos para vivir mejor y cuidar el planeta.</p>
+        </div>
+
+        <div class="columna-pie">
+          <h4>Tienda</h4>
+          <ul class="enlaces-pie">
+            <li><a href="shop.html">Todos los productos</a></li>
+            <li><a href="shop.html">Higiene Natural</a></li>
+            <li><a href="shop.html">Hogar Sostenible</a></li>
+            <li><a href="shop.html">Alimentación Bio</a></li>
+            <li><a href="shop.html">Moda Consciente</a></li>
+          </ul>
+        </div>
+
+        <div class="columna-pie">
+          <h4>Empresa</h4>
+          <ul class="enlaces-pie">
+            <li><a href="about.html">Nuestra historia</a></li>
+            <li><a href="about.html">Compromiso eco</a></li>
+            <li><a href="about.html">El equipo</a></li>
+            <li><a href="#">Blog verde</a></li>
+          </ul>
+        </div>
+
+        <div class="columna-pie">
+          <h4>Ayuda</h4>
+          <ul class="enlaces-pie">
+            <li><a href="#">Envíos y devoluciones</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="fondo-pie">
+        <p>© 2026 EcoMarket · Hecho con mucho amor para nuestro jurado del proyecto intermodular</p>
+        <div class="sellos-eco">
+          <span class="sello-eco">Samuel Bardera</span>
+          <span class="sello-eco">Nikita Breus</span>
+          <span class="sello-eco">Samuel Ruiz</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <!--ESTAS LINEAS DE SCRIPT NO FUNCIONAN-->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const featured = PRODUCTS.filter(p => p.badge === 'Bestseller').slice(0, 4);
+      const grid = document.getElementById('rejilla-destacados');
+      if (!grid) return;
+
+      grid.innerHTML = featured.map(p => `
+        <article class="tarjeta-producto" data-animate>
+          <div class="envoltorio-imagen">
+            <div class="emoji-producto">${p.emoji}</div>
+          </div>
+          <div class="info-producto">
+            <span class="etiqueta-categoria">${{higiene:'Higiene',hogar:'Hogar',alimentacion:'Alimentación',moda:'Moda'}[p.category]}</span>
+            <h3 class="nombre-producto">${p.name}</h3>
+            <p class="descripcion-producto">${p.description}</p>
+            <div class="pie-producto">
+              <span class="precio-producto">€${p.price.toFixed(2)}</span>
+              <button class="boton-anadir-carrito" onclick="addToCart(${p.id})">+ Añadir</button>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      initScrollAnimations();
+    });
+  </script>
+
+</body>
+</html>

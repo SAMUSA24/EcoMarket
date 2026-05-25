@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La historia de EcoMarket — Nacimos en 2018 con una misión: hacer accesible el consumo ecológico a todos. Conoce nuestro compromiso con el planeta." />
+  <title>Nosotros · EcoMarket</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="img/Logo definitivo.png">
+</head>
+<body>
+  <header class="cabecera-sitio" role="banner">
+    <div class="cabecera-interior">
+      <a href="index.html" class="logo-sitio" aria-label="EcoMarket inicio">
+        <span class="icono-logo">🌿</span>
+        Eco<span>Market</span>
+      </a>
+
+      <nav id="main-nav" role="navigation" aria-label="Navegación principal">
+        <a href="index.html" class="enlace-nav">Inicio</a>
+        <a href="shop.html"  class="enlace-nav">Tienda</a>
+        <a href="about.html" class="enlace-nav active">Nosotros</a>
+      </nav>
+
+      <button class="boton-carrito boton" aria-label="Abrir carrito de compras">
+        🛒 <span>Carrito</span>
+        <span class="contador-carrito" aria-live="polite">0</span>
+      </button>
+    </div>
+  </header>
+  <div id="cart-container"></div>
+
+  <main>
+    <div class="hero-nosotros" role="banner">
+      <span class="secciont" style="background: var(--clr-terra);">Nuestra Historia</span>
+      <h1>Nacimos del amor<br>por el planeta</h1>
+      <p class="lead">
+        Desde una pequeña tienda ecológica en Alcorcon hasta llegar a más de 150 hogares.
+        Este es el viaje de EcoMarket.
+      </p>
+    </div>
+    <div class="banda-metricas" role="region" aria-label="Nuestros números">
+      <div class="rejilla-metricas">
+        <div class="elemento-metrica" data-animate>
+          <div class="valor-metrica">150+</div>
+          <div class="etiqueta-metrica">Hogares EcoMarket</div>
+        </div>
+        <div class="elemento-metrica" data-animate data-delay="1">
+          <div class="valor-metrica">25</div>
+          <div class="etiqueta-metrica">Productos certificados</div>
+        </div>
+        <div class="elemento-metrica" data-animate data-delay="2">
+          <div class="valor-metrica">2+</div>
+          <div class="etiqueta-metrica">Años de misión</div>
+        </div>
+        <div class="elemento-metrica" data-animate data-delay="3">
+          <div class="valor-metrica">0</div>
+          <div class="etiqueta-metrica">Plásticos de un solo uso</div>
+        </div>
+        <div class="elemento-metrica" data-animate data-delay="4">
+          <div class="valor-metrica">1.000</div>
+          <div class="etiqueta-metrica">Árboles plantados</div>
+        </div>
+      </div>
+    </div>
+    <section class="section seccion--alternativa" aria-labelledby="commitment-heading">
+      <div class="contenedor">
+        <div class="texto-centrado" style="margin-bottom: var(--space-2xl)">
+          <span class="secciont">Nuestros Valores</span>
+          <h2 id="commitment-heading" data-animate>Compromiso sin<br> rodeos</h2>
+          <p data-animate data-delay="1">
+            No somos "eco-friendly". Somos EcoMarket.
+            Aquí están los cuatro pilares que guían cada decisión que tomamos.
+          </p>
+        </div>
+
+        <div class="rejilla-compromisos">
+
+          <div class="tarjeta-compromiso" data-animate data-delay="1">
+            <div class="icon">🔍</div>
+            <h3>Auditoría 360°</h3>
+            <p>
+              Cada producto pasa por nuestra auditoría de sostenibilidad antes de entrar al catálogo.
+              Analizamos ingredientes, proveedores, condiciones laborales y huella ambiental.
+              Si no cumple el 100%, no entra.
+            </p>
+          </div>
+
+          <div class="tarjeta-compromiso" data-animate data-delay="2">
+            <div class="icon">📦</div>
+            <h3>Zero Plástico</h3>
+            <p>
+              Hemos eliminado el plástico de toda nuestra cadena de valor. Desde los envases
+              de producto hasta el packaging de envío. Vidrio, papel kraft, bambú y corcho
+              son nuestros materiales de confianza.
+            </p>
+          </div>
+
+          <div class="tarjeta-compromiso" data-animate data-delay="3">
+            <div class="icon">🌱</div>
+            <h3>Economía Circular</h3>
+            <p>
+              Diseñamos pensando en el fin de vida de cada producto. Ofrecemos programa
+              de devolución de envases, recarga de productos y guías de compostaje
+              para nuestros materiales orgánicos.
+            </p>
+          </div>
+
+          <div class="tarjeta-compromiso" data-animate data-delay="4">
+            <div class="icon">🤝</div>
+            <h3>Impacto Social</h3>
+            <p>
+              El 5% de cada venta va a proyectos de reforestación y apoyamos directamente
+              a 23 pequeños productores locales, garantizando precios justos
+              y condiciones laborales dignas.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="team-heading">
+      <div class="contenedor">
+        <div class="texto-centrado" style="margin-bottom: var(--space-2xl)">
+          <span class="secciont">Las personas detrás</span>
+          <h2 id="team-heading" data-animate>El equipo que<br>mueve EcoMarket</h2>
+        </div>
+        <div class="rejilla-equipo">
+          <article class="tarjeta-equipo" data-animate data-delay="2">
+            <div class="avatar-equipo" aria-hidden="true">👨‍💻</div>
+            <h3>Samuel Bardera</h3>
+            <p class="role">Configuracion Servidor</p>
+            <p>encargado de la instalacion y configuracion del servidor entre otras cosas.</p>
+          </article>
+          <article class="tarjeta-equipo" data-animate data-delay="3">
+            <div class="avatar-equipo" aria-hidden="true">👨‍💼</div>
+            <h3>Nikita Breus</h3>
+            <p class="role">Seguridad</p>
+            <p>Encargado de todo lo relacionado con la seguridad de la empresa y la seguridad de los datos.</p>
+          </article>
+
+          <article class="tarjeta-equipo" data-animate data-delay="4">
+            <div class="avatar-equipo" aria-hidden="true">👨‍💻</div>
+            <h3>Samuel Ruiz</h3>
+            <p class="role">Desarrollador</p>
+            <p>Encargado de crear la pagina web junto con los documentos de la empresa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section seccion--alternativa seccion--textura" aria-label="Manifiesto">
+      <div class="contenedor texto-centrado">
+        <span class="secciont">Nuestro Manifiesto</span>
+        <blockquote style="
+          font-family: var(--font-display);
+          font-size: clamp(1.2rem, 3vw, 2rem);
+          color: var(--clr-green-deep);
+          max-width: 70ch;
+          margin: 2rem auto;
+          line-height: 1.4;
+          padding: 2rem;
+          border-left: 4px solid var(--clr-terra);
+          background: white;
+          border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+          text-align: left;
+          box-shadow: var(--shadow-sm);
+        " data-animate>
+          <p style="max-width: none; margin-bottom: 1rem;">
+            "Gracias por todo lo enseñado en estos años y gracias por estar ahi siempre que lo hemos necesitado.
+             Una vez mas, demostrando los buenos profesores que sois."
+          </p>
+          <footer style="font-size: 0.85rem; opacity: 0.65; font-family: var(--font-body); font-weight: 700;">
+            — Samuel Bardera, Nikita Breus y Samuel Yuste
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+    <div class="banner-llamada" role="complementary">
+      <div class="contenedor texto-centrado">
+        <span class="secciont" style="background:var(--clr-terra)">¿Te unes?</span>
+        <h2 data-animate>Forma parte de la<br>revolución verde</h2>
+        <p data-animate data-delay="1">
+          Cada compra en EcoMarket es un paso hacia un planeta más sano.
+          Descubre nuestro catálogo de 25 productos certificados.
+        </p>
+        <a href="shop.html" class="boton boton-terracota" data-animate data-delay="2">
+          🛍️ Ir a la tienda
+        </a>
+      </div>
+    </div>
+
+  </main>
+  <footer class="pie-sitio" role="contentinfo">
+    <div class="contenedor">
+      <div class="rejilla-pie">
+
+        <div class="marca-pie">
+          <a href="index.html" class="logo-sitio">
+            <img src="img/Logo definitivo.png" class="icono-logo" width="75%" style="margin-top: -15%;"></img>
+          </a>
+          <p class="eslogan-pie">Productos ecológicos para vivir mejor y cuidar el planeta.</p>
+        </div>
+
+        <div class="columna-pie">
+          <h4>Categorías</h4>
+          <ul class="enlaces-pie">
+            <li><a href="shop.html">Higiene Natural</a></li>
+            <li><a href="shop.html">Hogar Sostenible</a></li>
+            <li><a href="shop.html">Alimentación Bio</a></li>
+            <li><a href="shop.html">Moda Consciente</a></li>
+          </ul>
+        </div>
+
+        <div class="columna-pie">
+          <h4>Empresa</h4>
+          <ul class="enlaces-pie">
+            <li><a href="about.html">Nuestra historia</a></li>
+            <li><a href="about.html">Compromiso eco</a></li>
+            <li><a href="about.html">El equipo</a></li>
+          </ul>
+        </div>
+
+        <div class="columna-pie">
+          <h4>Ayuda</h4>
+          <ul class="enlaces-pie">
+            <li><a href="#">Envíos y devoluciones</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="fondo-pie">
+        <p>© 2026 EcoMarket · Hecho con mucho amor para nuestro jurado del proyecto intermodular</p>
+        <div class="sellos-eco">
+          <span class="sello-eco">Samuel Bardera</span>
+          <span class="sello-eco">Nikita Breus</span>
+          <span class="sello-eco">Samuel Ruiz</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

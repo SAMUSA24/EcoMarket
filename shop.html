@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tienda EcoMarket — 25 productos ecológicos de Higiene, Hogar, Alimentación y Moda. Filtra y encuentra tu producto sostenible ideal." />
+  <title>Tienda · EcoMarket</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="img/Logo definitivo.png">
+</head>
+<body>
+  <header class="cabecera-sitio" role="banner">
+    <div class="cabecera-interior">
+      <a href="index.html" class="logo-sitio" aria-label="EcoMarket inicio">
+        <span class="icono-logo">🌿</span>
+        Eco<span>Market</span>
+      </a>
+
+      <nav id="main-nav" role="navigation" aria-label="Navegación principal">
+        <a href="index.html" class="enlace-nav">Inicio</a>
+        <a href="shop.html"  class="enlace-nav active">Tienda</a>
+        <a href="about.html" class="enlace-nav">Nosotros</a>
+      </nav>
+
+      <button class="boton-carrito boton" aria-label="Abrir carrito de compras">
+        🛒 <span>Carrito</span>
+        <span class="contador-carrito" aria-live="polite">0</span>
+      </button>
+    </div>
+  </header>
+  <div id="cart-container"></div>
+
+  <main>
+    <div class="cabecera-tienda" role="banner">
+      <span class="secciont" style="background:var(--clr-terra)">Tienda EcoMarket</span>
+      <h1>Todo lo que necesitas,<br>sin dañar el planeta</h1>
+      <p>
+        <span id="product-count">25</span> productos cuidadosamente seleccionados ·
+        100% ecológicos · Envío neutro en CO₂
+      </p>
+    </div>
+    <div class="barra-filtros" role="navigation" aria-label="Filtrar por categoría">
+      <button class="boton-filtro active" data-category="all" aria-pressed="true">
+        🌿 Todos
+      </button>
+      <button class="boton-filtro" data-category="higiene" aria-pressed="false">
+        🧴 Higiene
+      </button>
+      <button class="boton-filtro" data-category="hogar" aria-pressed="false">
+        🏡 Hogar
+      </button>
+      <button class="boton-filtro" data-category="alimentacion" aria-pressed="false">
+        🥗 Alimentación
+      </button>
+      <button class="boton-filtro" data-category="moda" aria-pressed="false">
+        👗 Moda
+      </button>
+    </div>
+    <section class="seccion-tienda" aria-label="Catálogo de productos">
+      <div class="contenedor">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+          <p style="opacity:0.65; font-size:0.9rem; max-width:none;">
+            Mostrando <strong id="results-count">25</strong> productos
+          </p>
+          <div class="sellos-eco">
+            <span class="sello-eco" style="background:rgba(74,124,63,0.1); border-color:var(--clr-green-mid); color:var(--clr-green-mid);">🐾 100% Cruelty Free</span>
+            <span class="sello-eco" style="background:rgba(74,124,63,0.1); border-color:var(--clr-green-mid); color:var(--clr-green-mid);">♻️ Packaging sostenible</span>
+          </div>
+        </div>
+        <div id="products-grid" role="list" aria-label="Lista de productos">
+  <article class="tarjeta-producto tarjeta-entrada" data-category="higiene">
+    <span class="insignia-producto">Bestseller</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">🧴</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Higiene</span>
+      <h3 class="nombre-producto">Champú Sólido de Lavanda</h3>
+      <p class="descripcion-producto">Sin sulfatos · 80 lavados · Zero waste</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€8.90</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(1,'Champú Sólido de Lavanda',8.90,'🌿')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="higiene">
+    <div class="envoltorio-imagen"><div class="emoji-producto">🧼</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Higiene</span>
+      <h3 class="nombre-producto">Desodorante de Bicarbonato</h3>
+      <p class="descripcion-producto">Vegano · Sin aluminio · 100% natural</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€6.50</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(2,'Desodorante de Bicarbonato',6.50,'🌸')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="higiene">
+    <span class="insignia-producto">Nuevo</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">🦷</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Higiene</span>
+      <h3 class="nombre-producto">Pasta de Dientes en Pastilla</h3>
+      <p class="descripcion-producto">Flúor natural · 62 pastillas · Lata reutilizable</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€5.90</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(3,'Pasta de Dientes en Pastilla',5.90,'🦷')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="higiene">
+    <div class="envoltorio-imagen"><div class="emoji-producto">🪥</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Higiene</span>
+      <h3 class="nombre-producto">Cepillo de Bambú</h3>
+      <p class="descripcion-producto">Cerdas de nylon BPA free · Mango biodegradable</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€4.20</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(4,'Cepillo de Bambú',4.20,'🎍')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="higiene">
+    <div class="envoltorio-imagen"><div class="emoji-producto">🫧</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Higiene</span>
+      <h3 class="nombre-producto">Jabón de Castilla Clásico</h3>
+      <p class="descripcion-producto">Aceite de oliva virgen · Multiuso · 200g</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€7.30</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(5,'Jabón de Castilla Clásico',7.30,'🫧')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="higiene">
+    <span class="insignia-producto">Eco Pick</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">🍚</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Higiene</span>
+      <h3 class="nombre-producto">Mascarilla de Arcilla</h3>
+      <p class="descripcion-producto">Purificante · Con aloe vera · Tarro de vidrio</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€12.00</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(6,'Mascarilla de Arcilla Verde',12.00,'💚')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+  <article class="tarjeta-producto tarjeta-entrada" data-category="hogar">
+    <div class="envoltorio-imagen"><div class="emoji-producto">🧽</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Hogar</span>
+      <h3 class="nombre-producto">Esponjas Vegetales x3</h3>
+      <p class="descripcion-producto">Luffa natural · 100% compostables · Pack de 3</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€5.50</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(7,'Esponjas Vegetales x3',5.50,'🌾')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="hogar">
+    <span class="insignia-producto">Bestseller</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">🍋</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Hogar</span>
+      <h3 class="nombre-producto">Detergente Concentrado Limón</h3>
+      <p class="descripcion-producto">500ml = 5L de producto · Sin fosfatos · Granel</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€9.80</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(8,'Detergente Concentrado Limón',9.80,'🍋')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="hogar">
+    <div class="envoltorio-imagen"><div class="emoji-producto">🕯️</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Hogar</span>
+      <h3 class="nombre-producto">Vela de Soja & Cedro</h3>
+      <p class="descripcion-producto">Cera de soja 100% · Mecha de algodón · 40h</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€14.50</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(9,'Vela de Soja & Cedro',14.50,'🕯️')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="hogar">
+    <span class="insignia-producto">Nuevo</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">🔃</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Hogar</span>
+      <h3 class="nombre-producto">Paños Reutilizables x5</h3>
+      <p class="descripcion-producto">Algodón orgánico GOTS · Sustituye 500 rollos</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€11.00</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(10,'Paños Reutilizables x5',11.00,'🧺')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="hogar">
+    <div class="envoltorio-imagen"><div class="emoji-producto">🛍️</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Hogar</span>
+      <h3 class="nombre-producto">Bolsas de Tela de Malla</h3>
+      <p class="descripcion-producto">Set de 4 bolsas · Para frutas y verduras · Orgánico</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€6.90</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(11,'Bolsas de Tela de Malla',6.90,'🛍️')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="hogar">
+    <div class="envoltorio-imagen"><div class="emoji-producto">🪻</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Hogar</span>
+      <h3 class="nombre-producto">Suavizante de Lavanda</h3>
+      <p class="descripcion-producto">Base vegetal · Sin colorantes · Biodegradable 98%</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€8.20</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(12,'Suavizante de Lavanda',8.20,'💜')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="hogar">
+    <span class="insignia-producto">Eco Pick</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">🐝</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Hogar</span>
+      <h3 class="nombre-producto">Envoltorio de Cera de Abeja</h3>
+      <p class="descripcion-producto">Sustituye el film transparente · Pack 3 tallas</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€13.50</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(13,'Envoltorio de Cera de Abeja',13.50,'🐝')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+  <article class="tarjeta-producto tarjeta-entrada" data-category="alimentacion">
+    <span class="insignia-producto">Bestseller</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">🍯</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Alimentación</span>
+      <h3 class="nombre-producto">Granola Artesanal de Miel</h3>
+      <p class="descripcion-producto">Avena integral · Sin azúcar añadido · 400g</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€7.90</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(14,'Granola Artesanal de Miel',7.90,'🌻')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="alimentacion">
+    <div class="envoltorio-imagen"><div class="emoji-producto">🍵</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Alimentación</span>
+      <h3 class="nombre-producto">Té Verde Sencha Bio</h3>
+      <p class="descripcion-producto">Agricultura ecológica · 50 bolsitas · Packaging papel</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€9.50</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(15,'Té Verde Sencha Bio',9.50,'🍵')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="alimentacion">
+    <span class="insignia-producto">Premium</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">🫒</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Alimentación</span>
+      <h3 class="nombre-producto">Aceite de Oliva Virgen Extra</h3>
+      <p class="descripcion-producto">Prensado en frío · Certificado orgánico · 500ml</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€16.80</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(16,'Aceite de Oliva Virgen Extra',16.80,'🫒')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="alimentacion">
+    <div class="envoltorio-imagen"><div class="emoji-producto">🥜</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Alimentación</span>
+      <h3 class="nombre-producto">Mix de Frutos Secos Bio</h3>
+      <p class="descripcion-producto">Almendras, nueces, anacardos · Sin tostar · 300g</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€11.20</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(17,'Mix de Frutos Secos Bio',11.20,'🥜')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="alimentacion">
+    <span class="insignia-producto">Eco Pick</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">🍯</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Alimentación</span>
+      <h3 class="nombre-producto">Miel de Flores Silvestres</h3>
+      <p class="descripcion-producto">Apicultura regenerativa · Sin filtrar · 350g</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€10.50</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(18,'Miel de Flores Silvestres',10.50,'🍯')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="alimentacion">
+    <span class="insignia-producto">Nuevo</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">🫙</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Alimentación</span>
+      <h3 class="nombre-producto">Kombucha de Jengibre</h3>
+      <p class="descripcion-producto">Fermentada en artesanal · Vivo y activo · 330ml</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€4.80</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(19,'Kombucha de Jengibre',4.80,'🫙')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+  <article class="tarjeta-producto tarjeta-entrada" data-category="moda">
+    <span class="insignia-producto">Bestseller</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">👕</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Moda</span>
+      <h3 class="nombre-producto">Camiseta de Algodón Orgánico</h3>
+      <p class="descripcion-producto">GOTS certificado · Tintura vegetal · Tallas XS-XL</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€29.00</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(20,'Camiseta de Algodón Orgánico',29.00,'👕')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="moda">
+    <span class="insignia-producto">Premium</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">🎒</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Moda</span>
+      <h3 class="nombre-producto">Mochila de Lona Reciclada</h3>
+      <p class="descripcion-producto">100% PET reciclado · 20L · Resistente al agua</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€48.00</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(21,'Mochila de Lona Reciclada',48.00,'🎒')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="moda">
+    <div class="envoltorio-imagen"><div class="emoji-producto">🧦</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Moda</span>
+      <h3 class="nombre-producto">Calcetines de Seda x3</h3>
+      <p class="descripcion-producto">Fibra de Seda · Antibacteriano natural · Varios colores</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€14.90</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(22,'Calcetines de Bambú x3',14.90,'🧦')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="moda">
+    <div class="envoltorio-imagen"><div class="emoji-producto">🧢</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Moda</span>
+      <h3 class="nombre-producto">Gorro de Lana Merino</h3>
+      <p class="descripcion-producto">Lana Merino mulesing-free · Certificado ZQ · Unisex</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€22.50</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(23,'Gorro de Lana Merino',22.50,'🧢')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="moda">
+    <span class="insignia-producto">Eco Pick</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">👜</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Moda</span>
+      <h3 class="nombre-producto">Bolso de Corcho Natural</h3>
+      <p class="descripcion-producto">Corcho portugués · Vegano · Resistente y ligero</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€37.00</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(24,'Bolso de Corcho Natural',37.00,'👜')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="tarjeta-producto tarjeta-entrada" data-category="moda">
+    <span class="insignia-producto">Nuevo</span>
+    <div class="envoltorio-imagen"><div class="emoji-producto">🪢</div></div>
+    <div class="info-producto">
+      <span class="etiqueta-categoria">Moda</span>
+      <h3 class="nombre-producto">Cinturón de Cuero Vegetal</h3>
+      <p class="descripcion-producto">Apple Leather · Subproducto agrícola · Ajustable</p>
+      <div class="pie-producto">
+        <span class="precio-producto">€31.00</span>
+        <button class="boton-anadir-carrito" onclick="addToCart(25,'Cinturón de Cuero Vegetal',31.00,'🌱')">+ Añadir</button>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+      </div>
+    </section>
+    <div class="banner-llamada" role="complementary">
+      <div class="contenedor texto-centrado">
+        <span class="secciont" style="background:var(--clr-terra)">¿Tienes alguna duda?</span>
+        <h2 data-animate>Asesoramiento eco<br>personalizado</h2>
+        <p data-animate data-delay="1">
+          Nuestro equipo de asesores ecológicos te ayuda a elegir los productos más
+          adecuados para tu estilo de vida. Sin compromiso.
+        </p>
+        <a href="about.html" class="boton boton-terracota" data-animate data-delay="2">
+          Conocer al equipo →
+        </a>
+      </div>
+    </div>
+
+  </main>
+  <footer class="pie-sitio" role="contentinfo">
+    <div class="contenedor">
+      <div class="rejilla-pie">
+
+        <div class="marca-pie">
+          <a href="index.html" class="logo-sitio">
+            <img src="img/Logo definitivo.png" class="icono-logo" width="75%" style="margin-top: -15%;"></img>
+          </a>
+          <p class="eslogan-pie">Productos ecológicos para vivir mejor y cuidar el planeta.</p>
+        </div>
+
+        <div class="columna-pie">
+          <h4>Categorías</h4>
+          <ul class="enlaces-pie">
+            <li><a href="#" onclick="document.querySelector('[data-category=higiene]').click(); return false;">Higiene Natural</a></li>
+            <li><a href="#" onclick="document.querySelector('[data-category=hogar]').click(); return false;">Hogar Sostenible</a></li>
+            <li><a href="#" onclick="document.querySelector('[data-category=alimentacion]').click(); return false;">Alimentación Bio</a></li>
+            <li><a href="#" onclick="document.querySelector('[data-category=moda]').click(); return false;">Moda Consciente</a></li>
+          </ul>
+        </div>
+
+        <div class="columna-pie">
+          <h4>Empresa</h4>
+          <ul class="enlaces-pie">
+            <li><a href="about.html">Nuestra historia</a></li>
+            <li><a href="about.html">Compromiso eco</a></li>
+            <li><a href="about.html">El equipo</a></li>
+          </ul>
+        </div>
+
+        <div class="columna-pie">
+          <h4>Ayuda</h4>
+          <ul class="enlaces-pie">
+            <li><a href="#">Envíos y devoluciones</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="fondo-pie">
+        <p>© 2026 EcoMarket · Hecho con mucho amor para nuestro jurado del proyecto intermodular</p>
+        <div class="sellos-eco">
+          <span class="sello-eco">Samuel Bardera</span>
+          <span class="sello-eco">Nikita Breus</span>
+          <span class="sello-eco">Samuel Ruiz</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    //ESTAS LINEAS DE SCRIPT NO FUNCIONAN
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.boton-filtro');
+      const resultsCount = document.getElementById('results-count');
+      filterBtns.forEach(boton => {
+        boton.addEventListener('click', () => {
+          filterBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+          boton.setAttribute('aria-pressed', 'true');
+          setTimeout(() => {
+            const cat = boton.dataset.category;
+            const count = cat === 'all'
+              ? PRODUCTS.length
+              : PRODUCTS.filter(p => p.category === cat).length;
+            if (resultsCount) resultsCount.textContent = count;
+          }, 50);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
